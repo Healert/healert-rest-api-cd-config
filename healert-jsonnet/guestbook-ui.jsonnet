@@ -53,6 +53,16 @@ function(
               {
                 image: image,
                 name: name,
+                env: [
+                  {
+                    name: 'MONGO_URL',
+                    value: mongo_url,
+                  },
+                  {
+                    name: 'TZ',
+                    value: "Africa/Nairobi",
+                  },
+                ],
                 ports: [
                   {
                     containerPort: containerPort,
@@ -64,7 +74,7 @@ function(
         },
       },
     },
-       {
+    {
       apiVersion: 'extensions/v1beta1',
       kind: 'Ingress',
       metadata: {
