@@ -53,7 +53,7 @@ function(
               {
                 name: 'firebase-config-data',
                 configMap: {
-                  name: 'firebase-config-data',
+                  name: 'firebase-config-config',
                 },
               },
             ],
