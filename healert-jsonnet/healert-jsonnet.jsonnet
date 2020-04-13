@@ -49,10 +49,25 @@ function(
             },
           },
           spec: {
+            volumes: [
+              {
+                name: 'firebase-config-data',
+                configMap: {
+                  name: 'firebase-config-data',
+                },
+              },
+            ],
             containers: [
               {
                 image: image,
                 name: name,
+                volumeMounts: [
+                  {
+                    name: 'firebase-config-data',
+                    mountPath: '/home/node/app/config/service-account-file.json',
+                    subPath: "service-account-file.json"
+                  },
+                ],
                 env: [
                   {
                     name: 'MONGO_URL',
