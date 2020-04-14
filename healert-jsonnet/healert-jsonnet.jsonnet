@@ -1,6 +1,6 @@
 function(
   containerPort=4000,
-  image='enyachoke/healert-rest-api:build-d261c58',
+  image='enyachoke/healert-rest-api:build-0b8d494',
   name='healert-rest-api',
   replicas=1,
   servicePort=4000,
